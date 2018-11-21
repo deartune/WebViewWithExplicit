@@ -1,8 +1,10 @@
 package com.example.edu.webviewwithexplicit;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EditText editText =findViewById(R.id.editText);
         WebView webView=findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
+        InputMethodManager inputMethodManager=(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(),0);
         webView.setWebViewClient(new WebViewClient(){
             @Override
             public boolean shouldOverrideUrlLoading(WebView view,String url){
@@ -34,3 +38,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         webView.requestFocus();
     }
 }
+

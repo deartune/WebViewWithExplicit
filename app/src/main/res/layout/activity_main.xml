@@ -8,11 +8,11 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/webView"
